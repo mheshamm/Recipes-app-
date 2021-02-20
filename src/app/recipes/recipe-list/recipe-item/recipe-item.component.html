@@ -1,0 +1,18 @@
+<a
+  style="cursor: pointer;"
+  [routerLink]="index"
+  routerLinkActive="active"
+  class="list-group-item clearfix recipe"
+  id="recipe">
+  <div class="row">
+    <div class="pull-left " id="img-div">
+      <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="img-responsive" id="avatar">
+      <div class="overlay"></div>
+    </div>
+
+    <div  id="text">
+      <p class="list-group-item-heading" id="rec-name">{{ recipe.name }}</p>
+      <p class="list-group-item-text" id="rec-desc">{{ recipe.description }}</p>
+    </div>
+  </div>
+</a>

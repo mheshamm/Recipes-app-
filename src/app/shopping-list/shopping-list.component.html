@@ -1,0 +1,24 @@
+<div class="row">
+  <img src="../../assets/woman-making-purchases-food-products-using-grocery-list-mobile-app-flat-vector-illustration-grocery-store-woman-making-194625556.jpg" class="img-back">
+  <div class="overlay"></div>
+  
+  
+  <app-shopping-edit></app-shopping-edit>
+  <div class="contain">
+      
+        <div
+          class="l-item "
+          style="cursor: pointer"
+          *ngFor="let ingredient of ingredients; let i = index"
+          (click)="onEditItem(i , $event)"
+          
+          
+        >
+          {{ ingredient.name }} 
+          <span id="amo">{{ ingredient.amount }}</span>
+          
+        </div>
+      
+    </div>
+  </div>
+

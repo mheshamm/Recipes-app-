@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="col-xs-12">
+        <form #reviewForm="ngForm" (ngSubmit)="onSubmit(reviewForm)" >
+            
+            <div class="form-group inputs">
+                <label for="tittle" > Tittle </label>
+                
+                    <input type="text" id="tittle" class="form-control" name="tittle" ngModel required >
+                </div>
+                <div class="form-group inputs" >
+                <ngb-rating [max]=5 [(rate)]='currentRate' [readonly]='false'></ngb-rating>
+                   
+                </div>
+            
+            <div class="form-group inputs">
+                
+                    <textarea name="review"  rows="4" class="form-control" ngModel required></textarea>
+                </div>
+            
+            <div class=" btns">
+                <button class="btn btn-success" type="submit" [disabled]="!reviewForm.valid " > Add Review </button>
+                
+            </div>
+        </form>
+    </div>
+
+</div>
+<div class="row" *ngFor="let review of reviews">
+    <div class="Areview" *ngIf="review.recipeId === id" >
+        <div class="img-div-cont" >
+
+            <div class="pull-left " id="img-div">
+               <img src="../../../assets/72cd969f8e21be3476277d12d44c791c.png" id="avatar" class="img-responsive" > 
+              <div class="overlay"></div>
+            </div>
+        </div>
+    
+        <div  id="rev-div"   >
+            <div class="revieww" >
+                <ngb-rating [max]=5 [rate]="review.rate" [readonly]='true'></ngb-rating>
+
+                <h2 class="list-group-item-heading" id="rev-tittle"> {{ review.tittle }}</h2>
+                <p class="list-group-item-text" id="rev-body"> {{ review.body }}</p>
+                
+            </div>
+        </div>
+      </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+        <div class="loading" *ngIf="isLoading">
+
+            <app-loading-spinner></app-loading-spinner>
+        </div>
+        <app-alert *ngIf="error" [msg]="error" (close)="cancel()"></app-alert>
+
+        <img src="https://cdn.dribbble.com/users/1731254/screenshots/8190185/asian_food_illustration_tubikarts_4x.png"
+            class="img-back">
+
+        <div class="row">
+            <div class="form-container">
+
+                <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
+                    <img src="../../assets/114-1149878_setting-user-avatar-in-specific-size-without-breaking.png"
+                        class="avatar">
+                    <div class="form-group">
+                        <label for="mail" class="label-mail" (click)="mail()"> E-Mail</label>
+                        <div class="mail-div">
+
+                            <fa-icon [icon]="userIcon" class="usericon"
+                                [ngStyle]="!authForm.valid && authForm.touched && {'color' : 'red'}"></fa-icon>
+                            <input type="email" id="mail" class="form-control" name="mail" ngModel required email>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="label-pass" (click)="pass()"> Password </label>
+                        <div class="password-div">
+
+                            <fa-icon [icon]="userPass" class="passicon"
+                                [ngStyle]="!authForm.valid && authForm.touched && {'color' : 'red'}"></fa-icon>
+                            <input type="password" id="password" class="form-control" name="password" ngModel required
+                                minlength="9">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 btns">
+                        <button class="btn btn-success" type="submit" [disabled]="!authForm.valid ">{{ isLogIn ? "Sign
+                            In" : "Sign Up" }}</button>
+                        <button class="btn btn-primary" type="button" (click)="onSwitch()"> {{ isLogIn ? "Sign Up " :
+                            "Sign In" }} </button>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+</div>

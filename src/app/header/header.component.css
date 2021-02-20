@@ -1,0 +1,35 @@
+.menu {
+    display: none;
+}
+@media screen and (max-width: 770px){
+
+    .menu fa-icon {
+        font-size: 18px;
+    }
+    .menu li , .menu ul {
+        list-style: none;
+        
+    }
+    .menu .dropdown {
+    display: inline-block;
+    
+    }
+    .menu{
+        display: inline-block;
+        float: right;
+        padding: 15px;
+        
+    }
+    #drop{
+        left: -188px;
+        min-width: 200px;
+        padding: 0;
+        overflow: hidden;
+    }
+    #drop a {
+    
+    padding: 10px 15px;
+    }
+}
+
+

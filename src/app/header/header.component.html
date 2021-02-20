@@ -1,0 +1,42 @@
+<nav class="navbar navbar-default ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a routerLink="/" class="navbar-brand">Ready Recipes</a>
+      <div class="menu">
+
+        <li class="dropdown" appDropdown *ngIf="isAuth">
+          <a style="cursor: pointer;" class="dropdown-toggle" role="button" *ngIf="isAuth"><fa-icon [icon]="menu"></fa-icon></a>
+          <ul class="dropdown-menu" id="drop">
+            <li routerLinkActive="active" ><a routerLink="/recipes">Recipes</a></li>
+          <li routerLinkActive="active"><a routerLink="/shopping-list">Shopping List</a></li>
+          <li  style="background-color: rgb(218, 21, 47); ">
+            <a (click)="onLogOut()" style="color: white; cursor: pointer;"> Log Out </a>
+          </li>
+          </ul>
+        </li>
+      </div>
+          
+
+       
+    </div>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active" *ngIf="isAuth"><a routerLink="/recipes">Recipes</a></li>
+        <li routerLinkActive="active" *ngIf="isAuth"><a routerLink="/shopping-list">Shopping List</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li *ngIf="isAuth" style="background-color: rgb(218, 21, 47); ">
+          <a (click)="onLogOut()" style="color: white; cursor: pointer;"> Log Out </a>
+        </li>
+        <li class="dropdown" appDropdown *ngIf="isAuth">
+          <a style="cursor: pointer;" class="dropdown-toggle" role="button">Manage <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a style="cursor: pointer;" (click)='onSave()'>Save Data</a></li>
+            <li><a style="cursor: pointer;" (click)="onFetch()">Fetch Data</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

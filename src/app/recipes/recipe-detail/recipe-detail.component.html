@@ -1,0 +1,71 @@
+<div class="row">
+  <div id="overlay">
+
+    <div class="col-xs-12">
+      <div class="img-div">
+
+        <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="img-responsive" style="max-height: 300px;">
+        <div class="overlay-img"></div>
+        <div class="rec-name">
+          <h1 id="name" class="recipe-name">{{ recipe.name }}</h1>
+        </div>
+        <div class="descreption">
+          <h3 id="desc">
+            {{ recipe.description }}
+          </h3>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row" >
+      <div class="col-xs-12">
+
+        <div class="btns-container">
+          <div class="btn-manage" id="cart">
+            <a (click)="onAddToShoppingList()">
+              <fa-icon [icon]="scart"></fa-icon>
+              <span id="count">{{ count }}</span>
+              <h6> Add To Shopping Cart </h6>
+            </a>
+          </div>
+          <div class="btn-manage">
+            <a (click)="onEditRecipe()">
+              <fa-icon [icon]="edit"></fa-icon>
+              <h6> Edit Recipe </h6>
+            </a>
+          </div>
+          <div class="btn-manage">
+            <a (click)="onDeleteRecipe()">
+              <fa-icon [icon]="delete"></fa-icon>
+              <h6> Delete Recipe </h6>
+            </a>
+          </div>
+  
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+  <div class="row">
+    <div class="col-sm-6 col-xs-12" *ngFor="let ingredient of recipe.ingredients">
+
+      <div class="ing">
+        <p>
+
+          {{ ingredient.name }}
+          <span id="ingAmo">{{ ingredient.amount }}</span>
+        </p>
+      </div>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="btns">
+      <button class="btn" (click)="goToReviews()"> Go To Reviews </button>
+    </div>
+  </div>

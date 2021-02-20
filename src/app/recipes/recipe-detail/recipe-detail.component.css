@@ -1,0 +1,170 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+.img-div{
+    display: block;
+    width: 100%;
+    
+    
+    margin: 10px auto;
+    text-align: center;
+    position: relative;
+}
+.overlay-img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 300px;
+    border-radius: 30px;
+    object-fit: cover;
+    background: rgb(34,97,195);
+background: radial-gradient(circle, rgba(34,97,195,0.2) 0%, rgba(167,45,253,0.2) 100%);
+}
+.rec-name {
+    position: absolute;
+    top: 200px;
+    margin-left: 20px;
+    color: white;
+    letter-spacing: 2px;
+    background: #1D4350;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+text-transform: uppercase;
+opacity: 0.98;
+padding: 5px 20px;
+transform: rotate(8deg);
+font-family: Potta One;
+font-weight: 300;
+overflow: hidden;
+}
+.descreption{
+    overflow: hidden;
+    position: absolute;
+    top: 8%;
+    right: 10px;
+    margin-left: 20px;
+    background: #8E0E00;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #1F1C18, #8E0E00);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #1F1C18, #8E0E00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+transform: rotate(8deg);
+text-transform: capitalize;
+opacity: 0.82;
+padding: 0px 10px;
+
+}
+.descreption #desc {
+    color: rgb(255, 255, 255);
+}
+.img-div img {
+    border-radius: 30px;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    
+
+}
+#name {
+    margin: 10px 0;
+    padding: 10px 0;
+}
+.btn-group{
+    margin: 10px 0;
+    
+}
+.btn-group button {
+    margin: 10px 0;
+}
+#desc{
+    margin: 10px 0;
+    padding-left: 10px;
+    color: red;
+    font-family: monospace;
+
+
+}
+.btns-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+    margin: 20px 0;
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex: 1;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    flex-flow: row;
+}
+.btn-manage{
+    display: block;
+    text-align: center;
+    
+    
+}
+fa-icon {
+    font-size: 30px;
+    color: white;
+}
+.btn-manage a {
+    color: white;
+    padding: 0 5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    
+
+}
+#cart {
+    position: relative;
+}
+#count {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    color: white;
+    z-index: 5;
+    border-radius: 50%;
+    left: 55%;
+}
+.ing{
+    height: 30px;
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    margin: 5px 10px;
+    
+}
+.ing p {
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: Ubuntu;
+    font-weight: bolder;
+    position: relative;
+
+
+}
+#ingAmo {
+    position: absolute;
+    background-color: tomato;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    top: 0px;
+    right: 0px;
+    font-size: 15px;
+    line-height: 25px;
+    border: 2px solid white;
+
+}
+.row{
+    overflow: hidden;
+}
+
+
+

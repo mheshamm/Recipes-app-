@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+#new {
+    background: #1D4350;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #A43931, #1D4350);
+    color: white;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: Ubuntu;
+    border: none;
+    font-size: 15px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+#new:hover {
+    background: #1D4350;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #A43931, #1D4350);
+}
+.row {
+    margin-bottom: 20px;
+}

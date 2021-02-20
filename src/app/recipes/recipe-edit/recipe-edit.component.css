@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+.btns {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 20px 0;
+}
+.btns .btn-danger{
+  margin-left: 10px;
+}
+input .ng-invalid .ng-untoched{
+  border: red 1px solid;
+
+}
+
+
+#f-item {
+  border-bottom: 1px white solid;
+  padding: 5px 0;
+  display: block;
+  cursor: pointer;
+}
+#f-img {
+  height: 200px;
+  
+  display: block;
+  margin: 20px auto;
+  
+  text-align: center;
+  z-index: 20;
+}
+#img {
+  width: 500px;
+  height: 200px ;
+  object-fit: cover;
+  display: block;
+  margin: 10px auto;
+  
+  border-radius: 20px;
+}
+#img:hover {
+  width: 400px;
+  height: 250px;
+  object-fit: scale-down;
+  padding-bottom: 40px;
+  margin-bottom: 20px;
+  cursor: zoom-out;
+
+  
+  
+}
+
+.input , .inputt {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  outline: white;
+  color: white;
+  font-family: Ubuntu;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 15px;
+  text-transform: capitalize;
+  
+
+}
+
+.input{
+  display: none;
+}
+.input:focus , .input:active , .inputt:active , .inputt:focus{
+   background-color: rgba(255, 255, 255, 0.103);
+}
+label {
+  color: white;
+  font-size: 25px;
+  font-family: Ubuntu;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+}
+textarea {
+  resize: none;
+}
+.block {
+  display: block;
+
+}
+.pos {
+  top: 20px;
+  font-size: 15px;
+}
+#ing {
+  margin: 10px 0;
+  background: #1D4350;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border: none;
+font-family: Ubuntu;
+text-transform: uppercase;
+letter-spacing: 1px;
+outline: none;
+}
+#ing:hover {
+  background: #1D4350;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #A43931, #1D4350);
+}
+.btn {
+  
+  font-family: Ubuntu;
+text-transform: uppercase;
+letter-spacing: 2px;
+outline: none;
+
+color: white;
+font-weight: 600;
+font-size: 15px;
+border : none ;
+}
+.save {
+  background: #1D4350;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #A43931, #1D4350);
+  color: white;
+}
+.save fa-icon {
+  color: rgb(33, 141, 39);
+}
+.save:hover {
+  background: #1D4350;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #A43931, #1D4350);
+}
+.cancel {
+  background: #8E0E00;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #1F1C18, #8E0E00);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #1F1C18, #8E0E00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.cancel fa-icon {
+  color: rgb(0, 0, 0);
+}
+.cancel:hover {
+  background: #8E0E00;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #1F1C18, #8E0E00);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #1F1C18, #8E0E00); 
+}
+.cancel:hover fa-icon {
+  color: #8E0E00;
+}
