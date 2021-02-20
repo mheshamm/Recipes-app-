@@ -4,7 +4,7 @@ import { HttpService } from 'src/app/shared/http.service';
 
 import { Recipe } from '../recipe.model';
 import { RecipeService } from '../recipe.service';
-import { faShoppingCart , faPencilAlt , faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart , faPencilAlt , faTrashAlt , faStar } from '@fortawesome/free-solid-svg-icons';
 import { AuthService } from '../../auth/auth.service';
 
 @Component({
@@ -18,6 +18,7 @@ export class RecipeDetailComponent implements OnInit {
   scart = faShoppingCart ;
   edit = faPencilAlt ;
   delete  = faTrashAlt ;
+  star = faStar ;
   count : number = 0 ;
 
 
