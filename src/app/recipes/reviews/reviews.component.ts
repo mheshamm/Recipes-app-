@@ -20,9 +20,11 @@ export class ReviewsComponent implements OnInit {
   currentRate = 2.5;
   reviews: any = []
   rev: any = []
+  name : string = null
  
 
-  constructor(private httpser: HttpService, private route: ActivatedRoute, private reviewServ: ReviewsService, private recServ: RecipeService) { }
+  constructor(private httpser: HttpService, private route: ActivatedRoute,
+     private reviewServ: ReviewsService, private recServ: RecipeService) { }
 
   ngOnInit(): void {
     this.subscription = this.reviewServ.reviewChanged
@@ -43,6 +45,7 @@ export class ReviewsComponent implements OnInit {
         (params: Params) => {
           console.log(params)
           this.id = +params['id'];
+          this.name=this.recServ.getRecipe(this.id).name ;
           this.reviews = this.reviewServ.allReviews();
 
 
@@ -51,6 +54,8 @@ export class ReviewsComponent implements OnInit {
 
         }
       );
+      
+      
     this.httpser.fetchReviews().subscribe(res => { });
 
 
@@ -68,7 +73,8 @@ export class ReviewsComponent implements OnInit {
   }
   onSubmit(form: NgForm) {
     const value = form.value;
-    const new1 = new Review(this.id, value.tittle, value.review, this.currentRate)
+    const new1 = new Review(this.id, value.tittle, value.review, this.currentRate , this.name)
+    console.log(new1)
     this.reviewServ.addReviews(new1);
 
     form.resetForm();

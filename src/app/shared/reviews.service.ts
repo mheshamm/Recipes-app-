@@ -1,4 +1,4 @@
-import { RecipeService } from '../recipes/recipe.service';
+import { RecipeService } from './../../../s/src/app/recipes/recipe.service';
 import { Subject } from 'rxjs';
 import { Review } from './review.model';
 import { Injectable } from '@angular/core';
@@ -33,6 +33,11 @@ export class ReviewsService {
   }
   setReview(review : Review[]){
     this.reviews = review ;
+    this.reviewChanged.next(this.reviews.slice());
+
+  }
+  deleteReview( ){
+    this.reviews.splice(0, this.reviews.length);
     this.reviewChanged.next(this.reviews.slice());
 
   }
